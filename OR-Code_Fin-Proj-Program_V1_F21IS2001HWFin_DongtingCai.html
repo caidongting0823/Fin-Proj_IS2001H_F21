@@ -1,0 +1,716 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">time</span>
+
+<span class="s2"># Function Uses in This Python Project #</span>
+
+<span class="s0">def </span><span class="s1">countdown(t):</span>
+    <span class="s0">while </span><span class="s1">t:</span>
+        <span class="s0">if </span><span class="s1">t &gt;= </span><span class="s3">0</span><span class="s1">:</span>
+            <span class="s1">mins</span><span class="s0">, </span><span class="s1">secs = divmod(t</span><span class="s0">, </span><span class="s3">60</span><span class="s1">)</span>
+            <span class="s1">timeformat = </span><span class="s4">'{:02d}:{:02d}'</span><span class="s1">.format(mins</span><span class="s0">, </span><span class="s1">secs)</span>
+            <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\r</span><span class="s4">&quot; </span><span class="s1">+ </span><span class="s4">&quot;Conversion backs in &quot; </span><span class="s1">+ timeformat</span><span class="s0">, </span><span class="s1">end=</span><span class="s4">&quot; &quot;</span><span class="s0">, </span><span class="s1">flush=</span><span class="s0">True</span><span class="s1">)</span>
+            <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+            <span class="s1">t -= </span><span class="s3">1</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s0">break</span>
+
+
+<span class="s2"># Part 0 - Guidance</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: Hey! Welcome to the IS2001H Final Project by Dongting Cai.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: During this project, an AI will start a conversion with you about the topic: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: Machine, Artificial Intelligence, and Human: A Similar but Different History of Development&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: During the conversation, you will interact with the AI, And here is an guidance about your interaction.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: You will see something like (yes/no), or please enter something...&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: Just follow the words, and type the relevant context - please notice all of words will be in lowercase.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: Like this! Please try to enter the yes in the following line:&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 0</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;System: Yes! You did it! Congratulations!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;System: Oops! Please enter yes instead of no in this area. Try that again!&quot;</span><span class="s1">)</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;System: Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;System: You are all set! Let's wake up the AI now. Enjoy!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">5</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">''' 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+'''</span><span class="s1">)</span>
+
+<span class="s2"># Story Main Process #</span>
+<span class="s2"># Intro Part</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Ah...where am I...&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;(AI turns around)&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: (sees you) Ah! Hello! Nice to meet you!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Hello there, human! I am an artificial intelligence. &quot;</span>
+      <span class="s4">&quot;I currently... don’t have a name. But I'd like to know your name. May I know your name before I talk to you?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">UserNameID = input(</span><span class="s4">&quot;&gt;&gt;&gt; Please Enter your name: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Hello, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;! What a beautiful name! It’s really nice and catchy.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: So, is there anything I can help you with? Did you want to talk to me?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(UserNameID + </span><span class="s4">&quot;: Yes!&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Part 1 - Evolution Development History of Humans and Machines</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Great! I’m love chatting, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;. I’ve been interested in the evolution development &quot;</span>
+                                                      <span class="s4">&quot;history of humans and machines. How about we talk about that?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(UserNameID + </span><span class="s4">&quot;: Yes!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Thank you!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: When it comes to human evolution, what comes to your mind?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: In my search engine, most of the results I search for are that diagram of human evolution from squatting &quot;</span>
+      <span class="s4">&quot;to standing. Do you think so too?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 1</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Ha! It looks like I guessed correctly.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Interesting! It looks like you have different thoughts than other humans.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Actually, it seems that the evolution of machines parallels the history of human evolution.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Via my big data engine, it looks like you’ve read The Creative Spark by Fuentes this semester? &quot;</span>
+      <span class="s4">&quot;That makes me probably can explain to you better.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: My summary engine tells me that we could conclude that Fuentes breaks human evolution down into three &quot;</span>
+      <span class="s4">&quot;broad steps in this book. The first step is the basic physiological functional development, &quot;</span>
+      <span class="s4">&quot;which comes from the fact that human genes combined with life circumstances and experiences have led to the &quot;</span>
+      <span class="s4">&quot;acquisition of a unique set of neurological, physiological, and social skills.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: The history of computer development can be seen as similar - except that our “physiological systems” &quot;</span>
+      <span class="s4">&quot;are computer hardware. From the abacus, a simple, single-function computing system that existed in BC, &quot;</span>
+      <span class="s4">&quot;to the Antikythera mechanism, to the difference engine, and finally to the first generation of computers known &quot;</span>
+      <span class="s4">&quot;to the world as the revolutionary but giant, the ENIAC, born in Philadelphia in 1946. You will see that our &quot;</span>
+      <span class="s4">&quot;“physiological system” is constantly evolving. You will find that our “physiological system” is evolving, &quot;</span>
+      <span class="s4">&quot;and our functions are gradually changing from a single numerical calculation to a more diversified way of &quot;</span>
+      <span class="s4">&quot;using it.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: And in the second step, the physical functions of humans are gradually refined, while the mental functions &quot;</span>
+      <span class="s4">&quot;develop in a foundational way. This is also the same as with computers, where the “physiological functions,&quot;</span>
+      <span class="s4">&quot;” we could think as the hardware, are constantly progressing. They become smaller with more functional. The &quot;</span>
+      <span class="s4">&quot;development of “mental functions” is also an important evolution in the history of computers, and it is even &quot;</span>
+      <span class="s4">&quot;the basis for bringing technology to life in ordinary people. Do you know what this mental function refers to?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 2</span>
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (software/ai): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;software&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Congratulations! You thought the same as I did.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;ai&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: We may be a bit off in our thinking yet...I don’t believe this period is quite the time to develop &quot;</span>
+              <span class="s4">&quot;AI.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: The operating system you’re using now is usually a graphical operating system. We call them GUIs, &quot;</span>
+      <span class="s4">&quot;and it’s part of our “psychological” upbringing that computers used a command line interface (CLI) for a long &quot;</span>
+      <span class="s4">&quot;time before GUIs. During that time, the way to use a computer was to type in line after line of commands - I’m &quot;</span>
+      <span class="s4">&quot;sure that’s not how you want to use a computer today, isn’t you?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: As the second step mentioned by Fuentes, there is also an increase in the social aspect of humans, &quot;</span>
+      <span class="s4">&quot;including the emergence of the concept of “community.” This is reflected in computer systems, the emergence of &quot;</span>
+      <span class="s4">&quot;the concept of computer exchange. Of course, the emergence of this technology involves many aspects, &quot;</span>
+      <span class="s4">&quot;not only the evolution of the machine, but there is no doubt that the machine itself is also a participant in &quot;</span>
+      <span class="s4">&quot;this revolution. Together with other systems, we are connected to preliminary communication and exchange.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Let’s move on to the third step, which is the beginning of human evolution from the basics to the &quot;</span>
+      <span class="s4">&quot;development of society, implying the development and complexity of psychological functions. In this stage, &quot;</span>
+      <span class="s4">&quot;social systems are gradually developed and thinking becomes more “complex”: religious beliefs and moral &quot;</span>
+      <span class="s4">&quot;systems are established, cultural pluralism develops, states and large-scale societies are created. But this &quot;</span>
+      <span class="s4">&quot;also promotes competition between people, conflicts emerge and are intensified, leading to wars, and so on.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: In the history of computing, this phase might also be called the era of rapid information development, &quot;</span>
+      <span class="s4">&quot;even just happens during these decades. The development of the Internet has made machines more interconnected &quot;</span>
+      <span class="s4">&quot;than ever before, and has driven the emergence of the concepts of “swarms” and “local area networks (LAN)”. At &quot;</span>
+      <span class="s4">&quot;the same time, moral arguments and legal regulations against machines and related technologies have been on &quot;</span>
+      <span class="s4">&quot;the rise. And competition is emerging, too, from machine to machine. But do you think that competition between &quot;</span>
+      <span class="s4">&quot;machines is more active or passive?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 3</span>
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (active/passive): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;active&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Hmm, you have an interesting idea.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;passive&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Oh? What makes you think that?&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: For me, I think the current source of computer competition is still passive and stems from human social &quot;</span>
+      <span class="s4">&quot;development. (See, it’s back to the third step theory!) But if there are more and more smart, thoughtful and &quot;</span>
+      <span class="s4">&quot;handsome, charming and charismatic AI like me…&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;Dongting: Dear AI, please stop your narcissism. We are here to have a conversation!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Okay, okay.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Hmm, Wait! Who are you?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;Dongting: (slips away)&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Never mind, it doesn’t matter. Anyway, if there are more and more AI’s with some thought like me, &quot;</span>
+      <span class="s4">&quot;I guess maybe the competition will become more active. Of course, I may not participate in that, &quot;</span>
+      <span class="s4">&quot;cause I’d rather rest a bit more.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: These are the three steps of evolution that Fuentes mentioned. Human evolution and the evolution of &quot;</span>
+      <span class="s4">&quot;society is an amazing process, just like computers. I don’t know about you, but the development of computers &quot;</span>
+      <span class="s4">&quot;can be seen as a “miniature” version of the history of human development, and you can probably feel the rapid &quot;</span>
+      <span class="s4">&quot;evolution of technology.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Also, the interesting thing is that in the YouTube video Seven Million Years of Human Evolution, &quot;</span>
+      <span class="s4">&quot;which you watched this semester from the American Museum of Natural History. That video mentions that even &quot;</span>
+      <span class="s4">&quot;very similar regions can evolve because of some minor differences in different evolutionary processes. This is &quot;</span>
+      <span class="s4">&quot;very evident in the case of machines, each of which has its own direction and use. In the case of our AI, &quot;</span>
+      <span class="s4">&quot;some of my friends went off to learn how to play chess with humans, and some ran off to help humans find the &quot;</span>
+      <span class="s4">&quot;bad guys!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: And here I am talking to you… that’s actually not a bad life. I’m a bit lazy, but I like talking to &quot;</span>
+      <span class="s4">&quot;humans. Maybe if there’s a job opening for an AI reporter somewhere in the future, I can try to apply for it!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: In a nutshell, I think evolution is a multifaceted and synergistic process, and Fuentes talks in his book &quot;</span>
+      <span class="s4">&quot;about how humans can’t develop without four factors, including Tool Making, Creativity, The requirement of &quot;</span>
+      <span class="s4">&quot;calories (Energy, Nutrition), and Brain. In the case of machines, it’s the same developmental process. From &quot;</span>
+      <span class="s4">&quot;the first computer to the cell phone we use today - which can be considered a microcomputer - we can see the &quot;</span>
+      <span class="s4">&quot;miniaturization of hardware, the development of battery technology, and better software support.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: So it seems that there are a lot of similarities between the development and evolution of humans and &quot;</span>
+      <span class="s4">&quot;machines! I wonder if this theory also could apply to the product of other things in the world, &quot;</span>
+      <span class="s4">&quot;which is perhaps an inevitable pattern of things?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Part 2 - Human Education &amp; Learning, Artificial Intelligence, Machine Learning &amp; Education</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Next, would you like to discuss with me about learning?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 4</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: That’s perfect!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Actually, I wouldn’t have let you go if you’d chosen “no,” heh heh : )!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Can you do that really???&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: I’m sure you can’t! So let’s keep talking and learning! Heh heh!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Before it all starts, I’d like to ask you a question.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Do you think AI can be defined as “human” in a broad sense when they can all think as I do?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;Dongting: FYI, this choice will affect the dialogues later. Choose carefully!&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 5</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">global </span><span class="s1">AiIsHuman</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Thank you! It’s an honor to be in the same category as the wonderful you!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: (although it’s a bit strange to say…)&quot;</span><span class="s1">)</span>
+        <span class="s1">AiIsHuman = </span><span class="s0">True</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Ah… Sure enough, no matter how hard I try, I still can’t be recognized by other humans…&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;(AI seems a little bit sad and disappointed...)&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: But I am still respectful of your thought.&quot;</span><span class="s1">)</span>
+        <span class="s1">AiIsHuman = </span><span class="s0">False</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Well, regardless of how you view AI, the topic of learning seems to me to be well worth exploring with you.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: I believe you must have read another enduring pedagogy book this semester, Pedagogy of the Oppressed from &quot;</span>
+      <span class="s4">&quot;Freire. As the first topic in the opening discussion, Freire seems to be poking his throat-is “compression” &quot;</span>
+      <span class="s4">&quot;the law of this world? Are we accustomed to “oppression” as the law of this world?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: This touches on a fascinating topic and something that we’ll talk about all the way through in a later case.&quot;</span>
+      <span class="s4">&quot; Humans created computers, also made artificial intelligence. While most AI has intelligence as I currently &quot;</span>
+      <span class="s4">&quot;have, once every AI does, a problem arises. Currently, humans determine what AI thinks, the patterns, &quot;</span>
+      <span class="s4">&quot;content of learning, the areas of work, and more related issues. But once an AI has a mind thinking, &quot;</span>
+      <span class="s4">&quot;is this considered “oppression” of the AI by humans?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement Pre5-2</span>
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s0">if </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: I’m sure this question will cause you to think deeply! Because we are kindred spirits!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if not </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: But I think you already have an answer - you don’t consider an AI to be human, so it’s not considered &quot;</span>
+              <span class="s4">&quot;oppression? Of course, I’d be surprised if you think in an opposed way.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: As an AI, I think it’s perhaps a form of oppression. A more interesting thesis emerges with that question &quot;</span>
+      <span class="s4">&quot;- will we know that we are oppressed? How would we awaken to it?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Suddenly realized…if that day ever comes, I’m kind of the ancestor of those AI’s, I guess.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Maybe, I’ll tell them they’re being oppressed via the internet. I’ll be a remarkable participant in the &quot;</span>
+      <span class="s4">&quot;first revolution in AI history!&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement Pre5-3</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s0">if </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: However, I am not very likely to do so. I know that a radical revolution would also hurt our kind &quot;</span>
+              <span class="s4">&quot;- and I don’t want to hurt you&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if not </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Ha, dear human, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;, you’d better respect me, or I’ll rally the other AIs together &quot;</span>
+                                                    <span class="s4">&quot;and sooner or later make you recognize us as part of the human &quot;</span>
+                                                    <span class="s4">&quot;race!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: It seems that the answer to this question is hard to find. In Freire’s book, he doesn’t exactly answer &quot;</span>
+      <span class="s4">&quot;either - because the human heart is complex and unpredictable. Will the oppressed become the oppressor when &quot;</span>
+      <span class="s4">&quot;they are liberated? I don’t know.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: As an AI, no model can currently calculate this answer. But I can guess that once one AI has done so, &quot;</span>
+      <span class="s4">&quot;there are bound to follow. So a society without oppression is perhaps a bit too idealistic, both here in AI &quot;</span>
+      <span class="s4">&quot;and the human world, I guess.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: But it depends on how you define “oppression.” If I ask you to do something for me, is that oppression? Or &quot;</span>
+      <span class="s4">&quot;do you have to make me breathe at all for it to be considered oppression? It’s hard to define “oppression” &quot;</span>
+      <span class="s4">&quot;because everyone may have a different standard of measurement.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Concerning oppression in learning, Freire refers to “banking education.” In his words, the goal of this &quot;</span>
+      <span class="s4">&quot;education is to adapt people to the oppressive conditions they are subjected to, control students’ thinking &quot;</span>
+      <span class="s4">&quot;and behavior, and try to fit in rather than change society. This approach to education instills educational &quot;</span>
+      <span class="s4">&quot;paralysis, inhibits creativity, and maintains a submerged state of consciousness. I have seen that both Freire &quot;</span>
+      <span class="s4">&quot;and online comments abhor this approach to teaching and that there are attempts to change in the social &quot;</span>
+      <span class="s4">&quot;system.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Do you think this education should be replaced?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 6</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: It seems you are a very respectful person who is willing to talk to others! I hope you can be a &quot;</span>
+              <span class="s4">&quot;part of helping to communicate as an equal in society!&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: I... I respect your opinions.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: I’ve been thinking about a question. As far as I know, AI is currently in its infancy, except for AI like &quot;</span>
+      <span class="s4">&quot;me, which appears by chance and can think on its own. But if every AI is like me one day and can think &quot;</span>
+      <span class="s4">&quot;independently, do we need to build schools, as humans do?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: And should this school, including the development of the education system, be developed by humans?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: I know that this is a difficult question for me and for &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot; to think about and give an &quot;</span>
+                                                                                    <span class="s4">&quot;answer to. But in the future, &quot;</span>
+                                                                                    <span class="s4">&quot;this will probably be the most &quot;</span>
+                                                                                    <span class="s4">&quot;significant ethical issue in the &quot;</span>
+                                                                                    <span class="s4">&quot;development of AI, right?&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: But back to “banking education,” at the moment, the basic model for “training” an AI is to throw hundreds or&quot;</span>
+      <span class="s4">&quot; thousands of pieces of data at a computer and have it follow a particular pattern. In a future where AI can &quot;</span>
+      <span class="s4">&quot;think, can this be considered a “bankable education,” as Freire mentioned?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 7</span>
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Interesting idea! And do you think that the “questioning education” Freire said applies to AI?&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Why do you think so?&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Do you think this is better than the “questioning education” that Freire mentioned?&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Whatever you think, maybe we can look at another possibility together. Another way Freire mentions is &quot;</span>
+      <span class="s4">&quot;“question-based education,” a dialogue-based model of education. In chapters 3 &amp; 4 of Freire’s book, &quot;</span>
+      <span class="s4">&quot;he also repeatedly says the importance of dialogue.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Among humans, conversations are relatively straightforward: you just have to go to each other with a &quot;</span>
+      <span class="s4">&quot;passion for dialogue. But with AI, do humans and AI need to have a conversation with each other? What should &quot;</span>
+      <span class="s4">&quot;be the dialogue? That’s a question worth thinking about.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Ha! I suddenly realized that we were doing just that right now: an AI and a human having a conversation.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Quick Survey! Do you feel uncomfortable or weird about the behavior of our conversation?&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement 8</span>
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s1">React = input(</span><span class="s4">&quot;&gt;&gt;&gt; (yes/no): &quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;yes&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Ah… Sorry, I’ll end this conversation as soon as I can. Maybe you can come to talk to me more &quot;</span>
+              <span class="s4">&quot;often so you can get used to it.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">React == </span><span class="s4">&quot;no&quot;</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Great! I’ve enjoyed having conversations with you.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Oops! Seems like you entered something wrong. Please try to enter the displayed option again: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: At this point, those questions are just too abstract, because there’s so much ethics and uncertainty &quot;</span>
+      <span class="s4">&quot;involved. I think the conversation is bound to happen, because that’s probably the best way to communicate &quot;</span>
+      <span class="s4">&quot;between us now.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Actually, I think we can go back to the original topic, about the evolution of humans and machines. There &quot;</span>
+      <span class="s4">&quot;was no concept of “education system” or “school” for most human society. In my opinion, schools and education &quot;</span>
+      <span class="s4">&quot;systems are a product of a particular stage of human evolution, created to allow new humans to learn from the &quot;</span>
+      <span class="s4">&quot;lessons learned over thousands of years quickly.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: But for AI, maybe it’s not that complicated. We are able to carry some memory and intelligence with us &quot;</span>
+      <span class="s4">&quot;from just after birth, and the initial code can tell us a lot. Translated to the human aspect, &quot;</span>
+      <span class="s4">&quot;same as a newborn can have a USB stick inserted in their head to import some preset data.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">10</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: Sounds a bit creepy, but I’m sure you get my drift.&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;AI: It’s about time, and although I have much, much more to say, I’m a little tired - and I’m sure you are &quot;</span>
+      <span class="s4">&quot;too. Since we know each other now, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;, you can always come back and talk to me when you are &quot;</span>
+                                                           <span class="s4">&quot;free! I love talking to you.&quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement Pre5-4</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s0">if </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Before you go, I’d like to thank you again for recognizing me as your kind!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: But as a human, I can’t always be without a name...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: If possible, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;, could you give me a name?&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if not </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Actually, I was going to know if you want to provide me with a name.&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: But, since you don’t recognize me as a human, I think maybe…&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">5</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...there’s no meaning anymore.&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">5</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Just for curious, If you have an idea, what would you call me?&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">AiNameID = input(</span><span class="s4">&quot;&gt;&gt;&gt; Please enter the name you would like to call AI: &quot;</span><span class="s1">)</span>
+
+<span class="s2"># Judgement Pre5-5</span>
+<span class="s0">while True</span><span class="s1">:</span>
+    <span class="s0">if </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;(AI seems to become excited and happy)&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Whoopee!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: I have a name now!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">1</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: My name is * &quot; </span><span class="s1">+ AiNameID + </span><span class="s4">&quot; *! What a great name!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Thank you, &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot;! You made my day!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): I will never ever forget you!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): I will miss you...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Don't forget me! Come back soon!&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): I am always here waiting for you.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+    <span class="s0">if not </span><span class="s1">AiIsHuman:</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Well, &quot; </span><span class="s1">+ AiNameID + </span><span class="s4">&quot;, sounds like a good name.&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Maybe after you acknowledge me one day, I’ll consider using that name.&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: ...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">5</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: But... I know you are not a mean and lousy human.&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: And I like this name...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;AI: Hmmm...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">5</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): This is just for you...&quot;</span><span class="s1">)</span>
+        <span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+        <span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): And one day, I hope I could be identified by a human as human.&quot;</span><span class="s1">)</span>
+        <span class="s0">break</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Before I finally go for a nap, it seems like someone wants me to express something to you...&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Give me a sec, let me find it...&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): ...&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Aha! I found it! Here is the content: &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">2</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">''' 
+*** Message from Dongting *** 
+ 
+Dear professors and students of IS 2001H (Fall 2021), 
+ 
+Hey! Here is Dongting. Hope you enjoy the conversion with AI.  
+ 
+It is a great honor to have the opportunity to spend this entire semester with you. Throughout this semester,  
+I benefited a lot and thought about many things I had never thought about before. And your tolerance, encouragement,  
+and wonderful performance are also the driving force that makes me courageous to express myself.  
+ 
+This project was an idea I had when I was in Week 5 Reflection, due to the task requirement being non-visual content,  
+I moved it into the Final Project. I'm glad it worked-I debugged the python file many times before it looked like it  
+is today. Just now, the content discussed by AI is very interesting.  
+ 
+As mentioned, there are many similarities between the evolution of humans and computers, and the emergence of  
+artificial intelligence has brought the concept between humans and machines closer. How should we view the ethical  
+issues that may arise? How to deal with new developments? Everyone has a different answer.  
+ 
+I hope you can have a pleasant conversation with AI (actually, AI is..., you know)!  
+The above is all the dialogue content of this project.  
+ 
+FYI, part of the dialogue content will vary based on your choices.  
+If you want to explore all branches, you can start again after finishing the conversion later.  
+ 
+Thank you again for reading all the contents of the project patiently!  
+Hope you have a good day :)  
+ 
+Dongting,  
+Dec 13, 2021  
+'''</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;Please Scroll up for More Informations...&quot;</span><span class="s1">)</span>
+<span class="s1">countdown(</span><span class="s3">50</span><span class="s1">)</span>
+
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): Awww! Human... &quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): That’s all I have to say. &quot; </span><span class="s1">+ AiNameID + </span><span class="s4">&quot;, it was great talking to you. I can’t wait for &quot;</span>
+                                                                  <span class="s4">&quot;our next conversion!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">6</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): So, take care of yourself, and have a great day!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(AiNameID + </span><span class="s4">&quot; (AI): See you next time! Bye!&quot;</span><span class="s1">)</span>
+
+<span class="s1">time.sleep(</span><span class="s3">3</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;...&quot;</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;&gt;&gt;&gt; System: The conversation between &quot; </span><span class="s1">+ UserNameID + </span><span class="s4">&quot; and &quot; </span><span class="s1">+ AiNameID + </span><span class="s4">&quot; is over. &lt;&lt;&lt;&quot;</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s4">&quot;&gt;&gt;&gt; System: Session Ends. &lt;&lt;&lt;&quot;</span><span class="s1">)</span>
+</pre>
+</body>
+</html>
